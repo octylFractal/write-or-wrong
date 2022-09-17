@@ -12,13 +12,11 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "jsx": "react-jsx",
-    "baseUrl": "./",
     "target": "ES2022",
     "typeRoots": [
       "./node_modules/@types",
       "./types"
     ],
-    "sourceMap": true,
     "outDir": "dist"
   }
 }
