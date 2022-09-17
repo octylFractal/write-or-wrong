@@ -1,5 +1,6 @@
 import * as path from "path";
 import * as webpack from "webpack";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 const config: webpack.Configuration = {
     mode: "development",
@@ -12,13 +13,23 @@ const config: webpack.Configuration = {
         path: path.resolve(__dirname, "dist"),
         filename: "renderer.bundle.js"
     },
+    plugins: [new MiniCssExtractPlugin()],
     module: {
         rules: [
             {
                 test: /\.ts(x)?$/,
                 loader: "ts-loader",
                 exclude: /node_modules/,
-            }
+            },
+            {
+                test: /\.styl$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "stylus-loader"
+                ]
+            },
+
         ]
     },
     resolve: {
