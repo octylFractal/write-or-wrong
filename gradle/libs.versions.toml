@@ -1,0 +1,47 @@
+[versions]
+javafx = "19"
+tinylog = "2.5.0"
+
+[plugins]
+licenser = "org.cadixdev.licenser:0.6.1"
+osdetector = "com.google.osdetector:1.7.1"
+jlink = "org.beryx.jlink:2.25.0"
+
+[libraries]
+jetbrains-annotations = "org.jetbrains:annotations:23.0.0"
+
+directories = "dev.dirs:directories:26"
+
+controlsfx = "org.controlsfx:controlsfx:11.1.1"
+
+ikonli-bom = "org.kordamp.ikonli:ikonli-bom:12.3.1"
+ikonli-javafx.module = "org.kordamp.ikonli:ikonli-javafx"
+ikonli-fontawesome5.module = "org.kordamp.ikonli:ikonli-fontawesome5-pack"
+
+junit-bom = "org.junit:junit-bom:5.9.0"
+junit-jupiter-api.module = "org.junit.jupiter:junit-jupiter-api"
+junit-jupiter-engine.module = "org.junit.jupiter:junit-jupiter-engine"
+
+[libraries.javafx-base]
+module = "org.openjfx:javafx-base"
+version.ref = "javafx"
+
+[libraries.javafx-controls]
+module = "org.openjfx:javafx-controls"
+version.ref = "javafx"
+
+[libraries.javafx-graphics]
+module = "org.openjfx:javafx-graphics"
+version.ref = "javafx"
+
+[libraries.javafx-fxml]
+module = "org.openjfx:javafx-fxml"
+version.ref = "javafx"
+
+[libraries.tinylog-api-kotlin]
+module = "org.tinylog:tinylog-api-kotlin"
+version.ref = "tinylog"
+
+[libraries.tinylog-impl]
+module = "org.tinylog:tinylog-impl"
+version.ref = "tinylog"
